@@ -17,7 +17,7 @@ CREATE TABLE IF NOT EXISTS genre_list (
 create table if not EXISTS album (
 id SERIAL PRIMARY key,
 name VARCHAR(50) not null,
-year VARCHAR(50) not null
+year integer not null
 );
 
 CREATE TABLE IF NOT EXISTS album_list (
@@ -29,14 +29,14 @@ CREATE TABLE IF NOT EXISTS album_list (
 create table if not exists song (
 id SERIAL primary key,
 name VARCHAR(50) not null,
-year VARCHAR(50) not null,
+duration integer not null,
 album_id INTEGER not null references album(id)
 );
 
 create table if not EXISTS playlist (
 id SERIAL PRIMARY key,
 name VARCHAR(50) not null,
-year VARCHAR (50) not null
+year integer not null
 );
 
 CREATE TABLE IF NOT EXISTS playlist_list (
