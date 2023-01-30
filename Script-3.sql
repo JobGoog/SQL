@@ -30,7 +30,8 @@ create table if not exists song (
 id SERIAL primary key,
 name VARCHAR(50) not null,
 duration integer not null,
-album_id INTEGER not null references album(id)
+album_id INTEGER not null references album(id),
+artist_id INTEGER not null references artist(id)
 );
 
 create table if not EXISTS playlist (
